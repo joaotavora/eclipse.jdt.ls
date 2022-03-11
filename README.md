@@ -81,7 +81,10 @@ java \
 
 If you want to debug eclipse.jdt.ls itself, add `-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044` right after `java` and ensure nothing else is running on port 1044. If you want to debug from the start of execution, change `suspend=n` to `suspend=y` so the JVM will wait for your debugger prior to starting the server.
 
-There is also a python wrapper script available that makes the start up of eclipse.jdt.ls more convenient (no need to juggle with Java options etc.). A sample usage is described below.
+Using the python wrapper script
+-------------------------------
+
+There is also a Python wrapper script available that makes the start up of eclipse.jdt.ls more convenient (no need to juggle with Java options etc.). A sample usage is described below. You need Python 3.9 to run it.
 
 ```bash
 ./org.eclipse.jdt.ls.product/target/repository/bin/jdtls \
@@ -89,7 +92,7 @@ There is also a python wrapper script available that makes the start up of eclip
 	-data /path/to/data
 ```
 
-All shown Java options will be set by the wrapper script. Please, note that the `-configuaration` options points to a user's folder to ensure that the configuration folder in `org.eclipse.jdt.ls.product/target/repository/config_*` remains untouched.
+All shown Java options will be set by the wrapper script. Please, note that the `-configuration` options points to a user's folder to ensure that the configuration folder in `org.eclipse.jdt.ls.product/target/repository/config_*` remains untouched.
 
 Development Setup
 -----------------
